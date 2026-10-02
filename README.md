@@ -2,7 +2,6 @@
 
 **Fraud frequency, financial impact and a risk-monitoring dashboard** | Python • Power BI • DAX
 
-![Dashboard Page 1](Images/dashboard_page1.png)
 
 ---
 
@@ -35,6 +34,7 @@ This project analyses 283,726 credit card transactions to answer three business 
 
 It is a **descriptive risk-analytics project** (data cleaning, EDA, KPIs, dashboard, recommendations). It is **not** a machine-learning model.
 
+> **Explain it in 60 seconds:** "Fraud is only 0.167% of transactions, so accuracy is a useless KPI. I used rates and values instead. I found that small transactions (under 10) hold half of the fraud *cases* but under 1% of the fraud *money*, while transactions above 500 are 3% of volume but hold 52% of fraud value and have the highest fraud rate. So I recommended risk-based checks focused on high-value transactions and automated rules for small ones, and built a Power BI dashboard to monitor the KPIs."
 
 ---
 
@@ -49,6 +49,7 @@ It is a **descriptive risk-analytics project** (data cleaning, EDA, KPIs, dashbo
 | 5 | Find anonymised features statistically linked to fraud | V17, V14, V12 strongest |
 | 6 | Define monitoring KPIs and recommendations | 5 dashboard KPI cards (10 KPIs calculated in Python), 7 recommendations |
 
+**Stakeholders:** Fraud Operations Manager, Head of Risk, Card Product Manager, Senior Management, Risk Analytics team.
 
 ---
 
@@ -65,7 +66,14 @@ It is a **descriptive risk-analytics project** (data cleaning, EDA, KPIs, dashbo
 | `Amount` | Transaction amount (currency not stated) |
 | `Class` | 0 = legitimate, 1 = fraud |
 
+**Important limitations**
+- V1–V28 are anonymised PCA variables, so the analysis identifies statistical patterns rather than directly interpretable business attributes.
+- `Time` is elapsed time, so no claims such as "fraud happens at night" are made.
+- Only about 2 days of data and 473 fraud cases; no merchant, customer or location data.
 
+The raw `creditcard.csv` (about 144 MB) is not stored here. Download it from Kaggle (see `Data/README.md`).
+
+---
 
 ## 4. Tools Used
 
@@ -101,7 +109,7 @@ It is a **descriptive risk-analytics project** (data cleaning, EDA, KPIs, dashbo
 | Average Fraud Amount | Fraud Value ÷ Fraud Transactions | 123.87 |
 | Maximum Fraud Amount | max Amount where Class = 1 | 2,125.87 |
 
-
+**Keep these four separate:** transaction count (how many) · fraud rate (how often) · fraud amount (how much money) · fraud value rate (fraud money as a share of all money).
 
 ---
 
@@ -120,20 +128,10 @@ It is a **descriptive risk-analytics project** (data cleaning, EDA, KPIs, dashbo
 | 9 | A few large frauds matter | Largest 2,125.87; 34 frauds above 500; top 5 = 14.1% of fraud value |
 | 10 | Statistical signals exist | V17 (−0.313), V14 (−0.293), V12 (−0.251). Anonymised, so no business meaning |
 
-![Fraud frequency vs financial impact](Images/06_fraud_frequency_vs_value.png)
-
 
 ## 8. Power BI Dashboard
 
-The dashboard (screenshot at the top of this page) has three pages:
-
-- **Page 1 – Executive Overview:** 5 KPI cards (Total Transactions, Fraud Transactions, Fraud Rate %, Fraud Transaction Value, Fraud Value Rate %), Fraud vs Legitimate transactions, Fraud rate by amount band, slicers for Amount Band and Time Period.
-- **Page 2 – Fraud Analysis:** fraud rate by elapsed hour, fraud frequency vs financial impact, average vs median vs P90 amount, top fraudulent transactions table.
-- **Page 3 – Insights & Risk Recommendations:** key findings and recommendations for stakeholders.
-
-Screenshots of both dashboard pages are in the project report (`Documentation/`). Dashboard file: `PowerBI/Credit_Card_Fraud_Risk_Dashboard.pbix`.
-
----
+![Credit Card Fraud & Transaction Risk Dashboard](Images/dashboard_page1.png)
 
 ## 9. Business Recommendations
 
@@ -153,16 +151,7 @@ These are suggestions based on observed patterns. They are **not guaranteed** to
 
 ---
 
-## 10. Limitations
-
-- Anonymised PCA features cannot be interpreted; no merchant, customer or location data.
-- `Time` is elapsed time; only about 2 days of data; 473 fraud cases, so hourly results are noisy.
-- Historic (2013), single-region dataset. The 0.167% rate must not be presented as an industry fraud rate.
-- Correlation is association, not causation. No prediction model was built.
-
----
-
-## 11. Project Structure
+## 10. Project Structure
 
 ```text
 Credit-Card-Fraud-Risk-Analysis
@@ -195,7 +184,7 @@ Credit-Card-Fraud-Risk-Analysis
 └── README.md
 ```
 
-## 12. How to Reproduce
+## 11. How to Reproduce
 
 1. Download `creditcard.csv` from Kaggle.
 2. Open `Python/Credit_Card_Fraud_Risk_Analytics.ipynb` in Google Colab, run all cells and upload the file when asked. A ZIP of the CSV outputs is downloaded.
@@ -203,7 +192,7 @@ Credit-Card-Fraud-Risk-Analysis
 
 ---
 
-## 13. Conclusion
+## 12. Conclusion
 
 This project shows how analytics supports fraud-risk decisions even when fraud is very rare. The key lesson is that **fraud frequency and fraud money tell different stories**: small transactions create most fraud cases, while large transactions hold most of the fraud value. A dashboard built on fraud rate, fraud value rate and concentration gives a risk team a more useful view than total volumes or accuracy.
 
