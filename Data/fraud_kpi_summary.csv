@@ -1,0 +1,11 @@
+KPI,Value,Formula,Business_Question
+Total Transactions,283726.0,COUNT of all transactions,How big is the portfolio?
+Fraud Transactions,473.0,COUNT of transactions where Class = 1,How many frauds?
+Legitimate Transactions,283253.0,COUNT of transactions where Class = 0,How many genuine customers transacted?
+Fraud Rate %,0.1667101358352777,Fraud Transactions / Total Transactions x 100,How often does fraud occur?
+Total Transaction Value,25102001.680000003,SUM of Amount (all transactions),How much money flows?
+Fraud Transaction Value,58591.39,SUM of Amount where Class = 1,How much money is fraud?
+Fraud Value Rate %,0.2334132183836265,Fraud Transaction Value / Total Transaction Value x 100,What share of money is fraud?
+Average Transaction Amount,88.47268731099724,Total Transaction Value / Total Transactions,What is a typical transaction size?
+Average Fraud Amount,123.87186046511628,Fraud Transaction Value / Fraud Transactions,What is a typical fraud size?
+Maximum Fraud Amount,2125.87,MAX of Amount where Class = 1,What is the worst single fraud loss?

@@ -1,0 +1,9 @@
+# Raw Kaggle dataset is ~144 MB (over GitHub's 100 MB file limit). Download it from Kaggle instead.
+creditcard.csv
+fraud_cleaned_full.csv
+Data/creditcard.csv
+# Power BI / OS temp files
+*.pbi*.tmp
+.DS_Store
+Thumbs.db
+~$*
