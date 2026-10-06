@@ -34,7 +34,6 @@ This project analyses 283,726 credit card transactions to answer three business 
 
 It is a **descriptive risk-analytics project** (data cleaning, EDA, KPIs, dashboard, recommendations). It is **not** a machine-learning model.
 
-> **Explain it in 60 seconds:** "Fraud is only 0.167% of transactions, so accuracy is a useless KPI. I used rates and values instead. I found that small transactions (under 10) hold half of the fraud *cases* but under 1% of the fraud *money*, while transactions above 500 are 3% of volume but hold 52% of fraud value and have the highest fraud rate. So I recommended risk-based checks focused on high-value transactions and automated rules for small ones, and built a Power BI dashboard to monitor the KPIs."
 
 ---
 
