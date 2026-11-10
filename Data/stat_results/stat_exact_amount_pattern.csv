@@ -1,0 +1,4 @@
+amount,fraud_cases,pct_of_fraud,pct_of_genuine,fraud_rate_pct_at_this_amount
+Exactly 1.00,105,22.199,4.752,0.774
+Exactly 0.00,25,5.285,0.629,1.383
+Exactly 99.99,27,5.708,0.107,8.182
