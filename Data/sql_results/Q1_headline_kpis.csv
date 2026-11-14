@@ -1,2 +1,0 @@
-total_transactions,fraud_transactions,legitimate_transactions,fraud_rate_pct,total_value,fraud_value,fraud_value_rate_pct,avg_amount,avg_fraud_amount,max_fraud_amount
-283726,473,283253,0.167,25102001.68,58591.39,0.233,88.47,123.87,2125.87

@@ -1,6 +1,0 @@
-amount_above,transactions_flagged,pct_of_all_transactions,fraud_cases_caught,pct_of_fraud_value_covered,flagged_per_fraud_found
-10,183905,64.82,235,99.2,783
-50,93578,32.98,180,96.6,520
-100,56399,19.88,125,88.3,451
-200,28770,10.14,82,78.3,351
-500,9109,3.21,34,52.4,268

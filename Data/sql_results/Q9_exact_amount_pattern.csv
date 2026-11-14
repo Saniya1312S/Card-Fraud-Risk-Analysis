@@ -1,5 +1,0 @@
-amount_group,transactions,fraud_cases,pct_of_fraud,pct_of_transactions,fraud_rate_pct
-Any other amount,268022,316,66.8,94.47,0.118
-Exactly 1.00,13566,105,22.2,4.78,0.774
-Exactly 99.99,330,27,5.7,0.12,8.182
-Exactly 0.00,1808,25,5.3,0.64,1.383
