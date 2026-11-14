@@ -1,0 +1,6 @@
+amount_band,fraud_value,pct_of_fraud_value,cumulative_pct_from_top_band
+5) 500+,30682.65,52.4,52.4
+4) 100 to 500,21052.28,35.9,88.3
+3) 50 to 100,4867.33,8.3,96.6
+2) 10 to 50,1539.82,2.6,99.2
+1) 0 to 10,449.31,0.8,100.0
